@@ -1,6 +1,6 @@
 <template>
     <main class="home-page">
-        <h1>Welcome to the Home Page</h1>
+        <h1 class="text-3xl font-bold underline">Welcome to the Home Page</h1>
         <p>This is the main landing page of the application.</p>
     </main>
 </template>
