@@ -11,6 +11,17 @@ const routes: Array<RouteRecordRaw> = [
     name: "home",
     component: HomePage,
   },
+  {
+    path: "/settings",
+    name: "settings",
+    component: () => import("@/pages/Settings/SettingsPage.vue"),
+  },
+  {
+    path: '/settings/:submenu',
+    name: 'settings-submenu',
+    component: () => import("@/pages/Settings/SettingsPage.vue"),
+    props: true
+  },
 ];
 
 const router = createRouter({
