@@ -7,25 +7,15 @@
   </section>
 </template>
 <script setup lang="ts">
+import type { ToggleProps } from "@/types/toggle.type";
 import ToggleSwitch from "primevue/toggleswitch";
 import { ref } from "vue";
 
 const checked = ref(false);
 
-const props = defineProps({
-  label: {
-    type: String,
-    required: false,
-    default: "",
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  onClick: {
-    type: Function,
-    required: false,
-    default: () => {},
-  },
+defineExpose({
+  checked,
 });
+
+const props = defineProps<ToggleProps>();
 </script>
