@@ -1,8 +1,5 @@
 <template>
-  <Menu :model="items" class="w-[300px]">
-    <template #start>
-      <h4 class="mt-6 mb-2 ml-8">Settings</h4>
-    </template>
+  <Menu :model="sidebar.items" class="w-full">
     <template #item="{ item, props }">
       <router-link
         v-if="item.route"
@@ -21,6 +18,7 @@
         :href="item.url"
         :target="item.target"
         v-bind="props.action"
+        @click="item.action && item.action()"
       >
         <span :class="item.icon" />
         <span class="ml-2">{{ item.label }}</span>
@@ -31,27 +29,17 @@
 
 <script setup lang="ts">
 import Menu from "primevue/menu";
-
-const items = [
-{
-    label: "Home Page",
-    icon: "pi pi-home",
-    route: "/",
-  },
-  {
-    label: "Privacy Settings",
-    icon: "pi pi-shield",
-    route: "/settings/privacy",
-  },
-  {
-    label: "Account Details",
-    icon: "pi pi-user",
-    route: "/settings/account",
-  },
-  {
-    label: "About",
-    icon: "pi pi-info-circle",
-    route: "/settings/about",
-  },
-];
+import { useSidebar } from "@/composables/useSidebar"
+const sidebar = useSidebar()
 </script>
+<style>
+.p-menuitem-link {
+  border: none !important;
+}
+.p-menu {
+  border: none !important;
+}
+.p-tabmenuitem .p-menuitem-link {
+  border: none !important;
+}
+</style>

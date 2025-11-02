@@ -1,13 +1,23 @@
 <template>
-  <section class="fixed left h-full">
-    <div class="card flex justify-center h-full">
-      <SidebarList :submenu="props.submenu" />
-    </div>
-  </section>
+  <Drawer
+    v-model:visible="visible"
+    header="Settings Menu"
+    :position="'left'"
+    :modal="false"
+    :dismissable="false"
+    :closeOnEscape="false"
+    :showCloseIcon="false"
+  >
+    <SidebarList :submenu="props.submenu" />
+  </Drawer>
 </template>
 
 <script setup lang="ts">
 import SidebarList from "./SidebarList.vue";
+import { ref } from "vue";
+import Drawer from "primevue/drawer";
+
+const visible = ref(true);
 
 const props = defineProps({
   submenu: {
@@ -17,3 +27,8 @@ const props = defineProps({
   },
 });
 </script>
+<style>
+.p-drawer-content {
+    padding: 0 0.40rem !important;
+}
+</style>
