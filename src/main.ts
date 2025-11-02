@@ -7,14 +7,31 @@ import PrimeVue from "primevue/config";
 import Aura from "@primeuix/themes/aura";
 import { Ripple } from "primevue";
 import DialogService from "primevue/dialogservice";
-import { VueQueryPlugin } from "@tanstack/vue-query";
+import { QueryClient, VueQueryPlugin } from "@tanstack/vue-query";
 
 import "./style.css";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5 minutos
+    },
+  },
+});
+
+queryClient.getQueryCache().subscribe((event) => {
+  if (event.query.state.status === "error") {
+    const error = event.query.state.error;
+
+    // Podemos adicionar alguma tratativa global aqui, como exibir uma notificação...
+    console.error("Erro na query:", error);
+  }
+});
 
 const app = createApp(App);
 
 app.use(router);
-app.use(VueQueryPlugin);
+app.use(VueQueryPlugin, { queryClient});
 app.use(PrimeVue, {
   ripple: true,
   theme: {
