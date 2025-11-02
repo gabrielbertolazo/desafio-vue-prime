@@ -21,7 +21,7 @@ const toggleTheme = (): void => {
   localStorage.setItem("theme", newIsDark ? "dark" : "light");
 };
 
-const initTheme = () => {
+const initTheme = (): void => {
   const savedTheme = localStorage.getItem("theme");
 
   if (savedTheme) {

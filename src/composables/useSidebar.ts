@@ -3,12 +3,13 @@ import { useLogoutModal } from "@/composables/useLogoutModal.ts";
 import LogoutModal from "@/components/LogoutModal/LogoutModal.vue";
 import { useTheme } from "./useTheme";
 import Toggle from "@/components/Toggle/Toggle.vue";
+import type { SidebarItems } from "@/types/sidebar.type";
 
 export function useSidebar() {
   const dialog = useDialog();
   const { getLogoutModalProps, redirectToHomePage } = useLogoutModal();
   const { toggleTheme } = useTheme();
-  const items = [
+  const items: SidebarItems[] = [
     {
       label: "Pagina inicial",
       icon: "pi pi-home",
