@@ -20,9 +20,9 @@ export function useSidebar() {
       route: "/settings/privacy",
     },
     {
-      label: "Detalhes da conta",
+      label: "Usuários",
       icon: "pi pi-user",
-      route: "/settings/account",
+      route: "/settings/users",
     },
     {
       label: "Sobre",

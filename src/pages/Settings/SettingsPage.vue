@@ -30,7 +30,7 @@ const formatString = (str: string): string => {
 const getComponentName = (submenu: string): Component | null => {
   const component: Record<string, Component | null> = {
     privacy: null,
-    account: userDetails,
+    users: userDetails,
   };
 
   return component[submenu.toLowerCase()] || null;
