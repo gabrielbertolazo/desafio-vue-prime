@@ -1,5 +1,5 @@
 <template>
-  <Menu :model="sidebar.items" class="w-full">
+  <Menu :model="sidebar.items" class="w-[20rem] p-2">
     <template #item="{ item, props }">
       <template v-if="item.isComponent">
         <component :is="item.component" v-bind="item.props" />
@@ -46,5 +46,11 @@ const sidebar = useSidebar()
 }
 .p-tabmenuitem .p-menuitem-link {
   border: none !important;
+}
+
+.p-menu-item:last-child {
+  position: absolute;
+  bottom: 12px;
+  width: 18rem;
 }
 </style>

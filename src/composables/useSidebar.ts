@@ -10,17 +10,6 @@ export function useSidebar() {
   const { toggleTheme } = useTheme();
   const items = [
     {
-      label: "Tema",
-      icon: 'pi pi-palette',
-      isComponent: true,
-      component: Toggle,
-      props: {
-        onClick: toggleTheme,
-        label: "Alternar Tema",
-        name: 'themeToggle',
-      }
-    },
-    {
       label: "Pagina inicial",
       icon: "pi pi-home",
       route: "/",
@@ -53,6 +42,17 @@ export function useSidebar() {
             }
           },
         });
+      },
+    },
+    {
+      label: "Tema",
+      icon: "pi pi-palette",
+      isComponent: true,
+      component: Toggle,
+      props: {
+        onClick: toggleTheme,
+        label: "Alternar Tema",
+        name: "themeToggle",
       },
     },
   ];

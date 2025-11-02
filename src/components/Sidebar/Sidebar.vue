@@ -1,5 +1,5 @@
 <template>
-  <Drawer
+  <!-- <Drawer
     v-model:visible="visible"
     header="Settings Menu"
     :position="'left'"
@@ -7,17 +7,16 @@
     :dismissable="false"
     :closeOnEscape="false"
     :showCloseIcon="false"
+    class="sidebar-container"
   >
     <SidebarList :submenu="props.submenu" />
-  </Drawer>
+  </Drawer> -->
+  <SidebarList :submenu="props.submenu" />
+
 </template>
 
 <script setup lang="ts">
 import SidebarList from "./SidebarList.vue";
-import { ref } from "vue";
-import Drawer from "primevue/drawer";
-
-const visible = ref(true);
 
 const props = defineProps({
   submenu: {
@@ -27,8 +26,3 @@ const props = defineProps({
   },
 });
 </script>
-<style>
-.p-drawer-content {
-    padding: 0 0.40rem !important;
-}
-</style>

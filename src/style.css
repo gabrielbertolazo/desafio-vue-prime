@@ -1,12 +1,10 @@
 @import "tailwindcss";
 @import "primeicons/primeicons.css";
 
-.app-dark-mode {
-  --background-color: #242424;
-  --color: rgba(255, 255, 255, 0.87);
-}
-
 :root {
+  --background-color: #F5F5F5;
+  --color: rgba(0, 0, 0, 0.87);
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -19,6 +17,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.app-dark-mode {
+  --background-color: #242424;
+  --color: rgba(255, 255, 255, 0.87);
+}
+
+
 #app {
   flex: 1;
   display: flex;
@@ -30,4 +34,15 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
 }
