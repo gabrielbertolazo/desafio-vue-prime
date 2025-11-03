@@ -53,7 +53,13 @@ npm run storybook
 npm run build
 ```
 
-### 5. Configurações de variáveis de ambiente
+### 5. Link para acessar o site em produção
+
+```
+https://gabrielbertolazo.github.io/desafio-vue-prime/
+```
+
+### 6. Configurações de variáveis de ambiente
 
 ```
 Foi adiciona apenas uma para um exemplo de como deve ser feito.
