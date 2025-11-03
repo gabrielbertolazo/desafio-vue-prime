@@ -15,6 +15,9 @@ Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
 Siga os passos abaixo para clonar o repositório e configurar o ambiente de desenvolvimento.
 
+## IMPORTANTE: Observações do projeto
+
+Implementada a chamada de dados assíncrona com TanStack Query no Menu de Usuários. O sistema agora gerencia e exibe o estado de carregamento (loading state) da lista antes de sua renderização final.
 ### 1. Clonar o Repositório
 
 Abra o terminal e execute o comando:
@@ -29,37 +32,37 @@ cd desafio-vue-prime
 npm install
 ```
 
-### 1. Caso não tenha a CLI do VITE instalado.
+### 2. Caso não tenha a CLI do VITE instalado.
 
 ```
 npm install -D vite
 ```
 
-### 2. Rodar o projeto
+### 3. Rodar o projeto
 
 ```
 npm run dev
 ```
 
-### 3. Iniciar o Storybook
+### 4. Iniciar o Storybook
 
 ```
 npm run storybook
 ```
 
-### 4. Buildando o projeto para publicação em produção
+### 5. Buildando o projeto para publicação em produção
 
 ```
 npm run build
 ```
 
-### 5. Link para acessar o site em produção
+### 6. Link para acessar o site em produção
 
 ```
 https://gabrielbertolazo.github.io/desafio-vue-prime/
 ```
 
-### 6. Configurações de variáveis de ambiente
+### 7. Configurações de variáveis de ambiente
 
 ```
 Foi adiciona apenas uma para um exemplo de como deve ser feito.
