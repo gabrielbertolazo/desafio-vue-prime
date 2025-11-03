@@ -1,6 +1,6 @@
 <template>
     <main class="m-8 flex flex-col home-page items-center">
-        <h1 class="text-3xl font-bold underline">Welcome to the Home Page</h1>
+        <h1 class="text-3xl font-bold underline text-center">Welcome to the Home Page</h1>
         <p class="text-center">This is the main landing page of the application.</p>
 
         <RouterLink

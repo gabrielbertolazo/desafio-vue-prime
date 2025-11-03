@@ -1,5 +1,5 @@
 <template>
-  <Menu :model="sidebar.items" class="w-[20rem] p-2">
+  <Menu :model="sidebar.items" :class="getClasses()">
     <template #item="{ item, props }">
       <template v-if="item.isComponent">
         <component :is="item.component" v-bind="item.props" />
@@ -35,7 +35,16 @@
 <script setup lang="ts">
 import Menu from "primevue/menu";
 import { useSidebar } from "@/composables/useSidebar"
+import { useMobile } from "@/composables/useMobile";
 const sidebar = useSidebar()
+const { isMobile } = useMobile()
+
+const getClasses = (): Record<string, boolean> => {
+  return {
+    "w-full h-full p-2": isMobile.value,
+    "w-[20rem] h-screen p-2": !isMobile.value,
+  }
+}
 </script>
 <style>
 .p-menuitem-link {

@@ -2,6 +2,13 @@
   <section
     class="settings-page m-8 flex flex-col justify-items-center items-center"
   >
+    <router-link
+      v-if="isMobile"
+      to="/settings"
+      class="absolute left-[20px] top-[20px]"
+    >
+      <span class="pi pi-arrow-left" />
+    </router-link>
     <h1 class="text-3xl">{{ formatString(submenu) }} Page</h1>
     <p class="text-1xl">Configure your application {{ submenu }} here.</p>
   </section>
@@ -10,7 +17,9 @@
 </template>
 
 <script setup lang="ts">
+import { useMobile } from "@/composables/useMobile";
 import { defineAsyncComponent, type Component } from "vue";
+const { isMobile } = useMobile()
 
 const userDetails = defineAsyncComponent(
   () => import("@/components/UserDetails/UserDetails.vue")
