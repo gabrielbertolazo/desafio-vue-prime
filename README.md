@@ -1,5 +1,60 @@
-# Vue 3 + TypeScript + Vite
+# 🚀 Desafio-Vue-Prime
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Este repositório contém o código-fonte de um **Desafio Técnico** focado no desenvolvimento de uma aplicação responsiva e escalável. O projeto foi construído utilizando **Vue 3, TypeScript e Vite** para avaliar a capacidade do desenvolvedor em implementar soluções robustas, otimizar performance e aplicar padrões de projeto modernos.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 📋 Pré-requisitos
+
+Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+
+* **Node.js:** Versão 22 ou superior.
+* **npm:** (Normalmente vem com o Node.js) ou **Yarn** ou **pnpm**.
+* **Vue 3:** Framework utilizado.
+* **Vite:** Este é o *bundler* principal. Embora seja instalado automaticamente, é fundamental entender seu papel na compilação e desenvolvimento.
+
+## 🛠️ Instalação e Configuração
+
+Siga os passos abaixo para clonar o repositório e configurar o ambiente de desenvolvimento.
+
+### 1. Clonar o Repositório
+
+Abra o terminal e execute o comando:
+
+```bash
+git clone https://github.com/gabrielbertolazo/desafio-vue-prime.git
+cd desafio-vue-prime
+
+```
+# Usando npm
+```
+npm install
+```
+
+### 1. Caso não tenha a CLI do VITE instalado.
+
+```
+npm install -D vite
+```
+
+### 2. Rodar o projeto
+
+```
+npm run dev
+```
+
+### 3. Iniciar o Storybook
+
+```
+npm run storybook
+```
+
+### 4. Buildando o projeto para publicação em produção
+
+```
+npm run build
+```
+
+### 5. Configurações de variáveis de ambiente
+
+```
+Foi adiciona apenas uma para um exemplo de como deve ser feito.
+```
